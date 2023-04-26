@@ -38,7 +38,7 @@ let deleteUser = async (userId) => {
       <div class="container-fluid">
         <div class="d-sm-flex align-items-center justify-content-between mb-4">
        <h1 class="h3 mb-2 text-gray-800">Users List</h1>
-       <Link to={"/user_create"} class="d-none d-sm-inline-block btn btn-sm btn-primary shadow-sm"><i
+       <Link to={"user_create"} class="d-none d-sm-inline-block btn btn-sm btn-primary shadow-sm"><i
                                 class="fas fa-download fa-sm text-white-50"></i> Create User</Link>
       </div>
           {
@@ -77,10 +77,10 @@ let deleteUser = async (userId) => {
                             <td>{user.city}</td>
                             
                             <td>
-                               <span> <Link to={`/user/${user.id}`} className='btn btn-warning mr-2'>View</Link></span>
+                               <span> <Link to={`${user.id}`} className='btn btn-warning mr-2'>View</Link></span>
                             
                             
-                               <span> <Link to={`/edit-user/${user.id}`} className='btn btn-primary mr-2'>Edit</Link></span>
+                               <span> <Link to={`${user.id}/edit`} className='btn btn-primary mr-2'>Edit</Link></span>
                                <span> <button onClick={() => deleteUser(user.id)} className='btn btn-danger'>Del</button></span>
                             </td>
                         </tr>

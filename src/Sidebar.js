@@ -19,7 +19,7 @@ function Sidebar() {
 
 
 <li class="nav-item active">
-    <Link to={"/dashboard"} class="nav-link" >
+    <Link to={"dashboard"} class="nav-link" >
         <i class="fas fa-fw fa-tachometer-alt"></i>
         <span>Dashboard</span></Link>
 </li>
@@ -29,7 +29,7 @@ function Sidebar() {
 
 
 <li class="nav-item">
-    <Link class="nav-link collapsed" to={"/user"} data-toggle="collapse" data-target="#collapseTwo"
+    <Link class="nav-link collapsed" to={"user"} data-toggle="collapse" data-target="#collapseTwo"
         aria-expanded="true" aria-controls="collapseTwo">
         <i class="fas fa-fw fa-cog"></i>
         <span>User</span>

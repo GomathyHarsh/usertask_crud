@@ -35,7 +35,7 @@ function EditUser() {
     e.preventDefault();
     try {
       await axios.put(`https://5cdd0a92b22718001417c19d.mockapi.io/api/users/${id}`, user);
-      navigate('/');
+      // navigate('/');
       alert("Successfully Edited")
     } catch (error) {
       console.log(error);
@@ -48,6 +48,7 @@ function EditUser() {
         <h2 className="text-center mb-4">Edit User</h2>
         <form onSubmit={e => onSubmit(e)}>
           <div className="form-group">
+            <label>Username</label>
             <input
               type="text"
               className="form-control form-control-lg"
@@ -58,6 +59,7 @@ function EditUser() {
             />
           </div>
           <div className="form-group">
+          <label>Email</label>
             <input
               type="email"
               className="form-control form-control-lg"
@@ -68,6 +70,7 @@ function EditUser() {
             />
           </div>
           <div className="form-group">
+          <label>Country</label>
             <input
               type="text"
               className="form-control form-control-lg"
@@ -78,6 +81,7 @@ function EditUser() {
             />
           </div>
           <div className="form-group">
+          <label>State</label>
             <input
               type="text"
               className="form-control form-control-lg"
@@ -88,6 +92,7 @@ function EditUser() {
             />
           </div>
           <div className="form-group">
+          <label>City</label>
             <input
               type="text"
               className="form-control form-control-lg"

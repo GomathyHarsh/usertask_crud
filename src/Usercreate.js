@@ -29,13 +29,13 @@ function Usercreate() {
             if(values.email && !/^[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,4}$/i.test(values.email)){
                 error.email="Please enter a valid email";
             }
-            if(values.phone.toString().length !== 10){
-                error.phone = "Please enter valid Number"  
-            }
-            let age=new Date().getFullYear() - parseInt(values.DOB.split("-")[0]);
-            if(age < 18){
-                error.DOB="You must be above 18"
-            }
+            // if(values.phone.toString().length !== 10){
+            //     error.phone = "Please enter valid Number"  
+            // }
+            // let age=new Date().getFullYear() - parseInt(values.DOB.split("-")[0]);
+            // if(age < 18){
+            //     error.DOB="You must be above 18"
+            // }
 
             return error;
         },
@@ -112,7 +112,7 @@ function Usercreate() {
                     </select>
                  </div>
             </div>
-            <div className='col-lg-4'>
+            {/* <div className='col-lg-4'>
                 <div className='form-group'>
                     <lable>Phone No</lable>
                     <input name="phone" onChange={formik.handleChange} 
@@ -145,7 +145,7 @@ function Usercreate() {
                         <option>other</option>
                     </select>
                  </div>
-            </div>
+            </div> */}
             <div className='col-lg-4'>
                 <div className='form-group'>
                     <input type={"Submit"} className="btn btn-primary"/>
