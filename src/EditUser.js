@@ -35,8 +35,9 @@ function EditUser() {
     e.preventDefault();
     try {
       await axios.put(`https://5cdd0a92b22718001417c19d.mockapi.io/api/users/${id}`, user);
-      // navigate('/');
-      alert("Successfully Edited")
+      
+      alert("Successfully Edited");
+      navigate('user')
     } catch (error) {
       console.log(error);
     }

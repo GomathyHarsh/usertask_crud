@@ -1,8 +1,10 @@
 import React from 'react';
 import { useFormik } from 'formik';
 import axios from 'axios';
+import { useNavigate } from "react-router-dom";
 
 function Usercreate() {
+    const navigate = useNavigate();
     const formik= useFormik({
         initialValues :{
             name:"",
@@ -43,6 +45,7 @@ function Usercreate() {
             try{
                 const userdata = await axios.post("https://5cdd0a92b22718001417c19d.mockapi.io/api/users",values);
                 alert("success");
+                navigate('user');
             }
             catch(error){
              alert("Error");
