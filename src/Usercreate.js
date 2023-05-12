@@ -44,7 +44,7 @@ function Usercreate() {
         onSubmit : async (values) =>{
             try{
                 const userdata = await axios.post("https://5cdd0a92b22718001417c19d.mockapi.io/api/users",values);
-                alert("success");
+                alert("User created successfully");
                 navigate('/portal/user');
             }
             catch(error){
